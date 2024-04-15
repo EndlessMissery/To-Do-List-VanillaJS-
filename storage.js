@@ -1,16 +1,16 @@
 export function saveTasks(tasks) {
-    // Save tasks array to local storage
+    // Save to local
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 export function loadTasks() {
-    // Retrieve tasks array from local storage
+    // Retrieve from local
     var savedTasks = localStorage.getItem('tasks');
 
     if (savedTasks) {
         return JSON.parse(savedTasks);
     } else {
-        return []; // Return an empty array if no tasks are found in local storage
+        return []; // Return nothing if no tasks
     }
 }
 
